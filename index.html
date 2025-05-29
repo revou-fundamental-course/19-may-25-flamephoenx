@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalkulator Suhu</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Kalkulator Suhu</h1>
+        </header>
+
+        <main>
+            <p id="instruction-text" class="instruction">
+                Masukkan suhu derajat Celsius (°C) ke kotak di bawah, lalu klik tombol "Konversi"
+                untuk mendapatkan hasil konversi dalam bentuk Fahrenheit (°F).
+            </p>
+
+            <section class="input-section">
+                <label for="temperature-input" id="input-label">Celsius (°C):</label>
+                <input type="text" id="temperature-input" placeholder="Contoh: 30">
+                <span id="error-message" class="error-message"></span>
+            </section>
+
+            <section class="button-group">
+                <button id="convert-button" class="btn btn-primary">Konversi</button>
+                <button id="reset-button" class="btn btn-secondary">Reset</button>
+                <button id="reverse-button" class="btn btn-accent">Reverse</button>
+            </section>
+
+            <section class="output-section">
+                <label for="temperature-output" id="output-label">Fahrenheit (°F):</label>
+                <div id="temperature-output" class="output-display" aria-live="polite"></div>
+            </section>
+
+            <section class="calculation-section">
+                <label for="calculation-explanation">Cara Kalkulasi:</label>
+                <div id="calculation-explanation" class="output-display calculation-steps" aria-live="polite"></div>
+            </section>
+        </main>
+
+        <footer>
+            <h2 id="formula-title">Cara Konversi Dari Celsius (°C) ke Fahrenheit (°F)</h2>
+            
+            <div class="running-text-container">
+                <p id="formula-explanation-running-text">
+                    Suhu S<sub id="formula-output-unit">(°F)</sub> dalam derajat Fahrenheit (°F) sama dengan suhu S<sub id="formula-input-unit">(°C)</sub> dalam derajat Celsius (°C) kali 9/5 tambah 32.
+                </p>
+            </div>
+            
+            <p id="formula-explanation-static-text">
+                <br>
+                <strong>S<sub id="formula-output-unit-detail">(°F)</sub> = (S<sub id="formula-input-unit-detail">(°C)</sub> × 9/5) + 32</strong>
+                <br>
+                atau
+                <br>
+                <strong>S<sub id="formula-output-unit-detail2">(°F)</sub> = (S<sub id="formula-input-unit-detail2">(°C)</sub> × 1.8) + 32</strong>
+            </p>
+        </footer>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
